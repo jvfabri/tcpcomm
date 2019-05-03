@@ -729,6 +729,9 @@
          <height>25</height>
         </rect>
        </property>
+       <property name="editable">
+        <bool>true</bool>
+       </property>
       </widget>
       <widget class="QLabel" name="text_status">
        <property name="geometry">
