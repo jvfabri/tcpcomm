@@ -21,6 +21,7 @@ If you wish to send a file:
 - TCPComm automatically chooses the best IP and port to send
 your file.
 - Wait for the Connected! message to show up, and click Send.
+
 If you wish to receive a file:
 - Select Receive from the drop down menu File.
 - Select the IP and port of the server you wish to receive the file
