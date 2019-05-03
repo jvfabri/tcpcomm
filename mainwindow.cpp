@@ -114,6 +114,9 @@ void MainWindow::receiveclicked(){
     connect(this,SIGNAL(connectionInfo(QString,quint16)),client,SLOT(connectionInfo(QString,quint16)));
     connect(client,SIGNAL(connecting()),this,SLOT(clientConnected()));
     connect(client,SIGNAL(youhavemail(QString)),this,SLOT(mailarrived(QString)));
+    for (int i=0;i<ui->fiel_clientIP->maxVisibleItems();i++){
+        ui->fiel_clientIP->removeItem(i);
+    }
 
     QList<QHostAddress> ipAddressesList = QNetworkInterface::allAddresses();
     for (int i = 0; i < ipAddressesList.size(); ++i) {
@@ -178,7 +181,7 @@ void MainWindow::on_fiel_clientport_editingFinished()
 void MainWindow::on_but_connect_clicked()
 {
     qDebug()<<"emitting";
-    emit connectionInfo(ip,port);
+    emit connectionInfo(ui->fiel_clientIP->currentText(),port);
     qDebug()<<"emitted";
 }
 
