@@ -6,8 +6,10 @@ To run the application, open up a terminal located in the folder of the
 project files and run the following commands:
 
   qmake
+  
   make
-  ./udptcp
+  
+  ./tcpcomm
   
 To run another stance of the same application to send/receive files 
 locally, open another terminal and do the same steps again.
