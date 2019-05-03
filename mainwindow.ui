@@ -73,7 +73,7 @@
      <enum>QFrame::Raised</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="sender_ui">
      <widget class="QTextBrowser" name="text_show">
@@ -752,6 +752,24 @@
      <zorder>text_show_2</zorder>
      <zorder>gridFrame_2</zorder>
     </widget>
+    <widget class="QWidget" name="help_ui">
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>471</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Hello! You are using TCPComm, your favorite file transfering utility.&lt;/p&gt;&lt;p&gt;If you wish to send a file:&lt;/p&gt;&lt;p&gt;- Select &lt;span style=&quot; font-weight:600;&quot;&gt;Send &lt;/span&gt;from the drop down menu &lt;span style=&quot; font-weight:600;&quot;&gt;File&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;- Select the file you wish to send using the file dialog.&lt;/p&gt;&lt;p&gt;- When everything is fired up, click &lt;span style=&quot; font-weight:600;&quot;&gt;Set up&lt;/span&gt; to configure your server.&lt;/p&gt;&lt;p&gt;- TCPComm automatically chooses the best IP and port to send&lt;/p&gt;&lt;p&gt;your file.&lt;/p&gt;&lt;p&gt;- Wait for the &lt;span style=&quot; font-weight:600;&quot;&gt;Connected! &lt;/span&gt;message to show up, and click &lt;span style=&quot; font-weight:600;&quot;&gt;Send.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;If you wish to receive a file:&lt;/p&gt;&lt;p&gt;- Select &lt;span style=&quot; font-weight:600;&quot;&gt;Receive &lt;/span&gt;from the drop down menu &lt;span style=&quot; font-weight:600;&quot;&gt;File.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;- Select the IP and port of the server you wish to receive the file&lt;/p&gt;&lt;p&gt;from. A list of local IPs are also shown in the &lt;span style=&quot; font-weight:600;&quot;&gt;IP&lt;/span&gt; drop down.&lt;/p&gt;&lt;p&gt;- Click &lt;span style=&quot; font-weight:600;&quot;&gt;Connect &lt;/span&gt;to connect to the server and wait for the server&lt;/p&gt;&lt;p&gt;to send the file to you.&lt;/p&gt;&lt;p&gt;- When you receive the file, a pop up will appear asking for you &lt;/p&gt;&lt;p&gt;to save the file received. Name it and open it up! Congrats!&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -767,6 +785,7 @@
     <property name="title">
      <string>Help</string>
     </property>
+    <addaction name="act_help"/>
    </widget>
    <widget class="QMenu" name="menuFile">
     <property name="title">
@@ -796,6 +815,11 @@
   <action name="act_receive">
    <property name="text">
     <string>Receive</string>
+   </property>
+  </action>
+  <action name="act_help">
+   <property name="text">
+    <string>Help  me!</string>
    </property>
   </action>
  </widget>

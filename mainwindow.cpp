@@ -9,8 +9,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->act_open,SIGNAL(triggered(bool)),this,SLOT(openclicked()));
     connect(ui->act_receive,SIGNAL(triggered(bool)),this,SLOT(receiveclicked()));
+    connect(ui->act_help,SIGNAL(triggered(bool)),this,SLOT(helpclicked()));
     ui->sender_ui->setVisible(false);
     ui->receive_ui->setVisible(false);
+    ui->help_ui->setVisible(false);
     ui->text_show->setVisible(false);
     ui->graph_show->setVisible(false);
 
@@ -28,6 +30,12 @@ MainWindow::~MainWindow()
     delete server;
     delete client;
 
+}
+void MainWindow::helpclicked(){
+    ui->sender_ui->setVisible(false);
+    ui->help_ui->setVisible(true);
+    ui->receive_ui->setVisible(false);
+    ui->text_openfile->setVisible(false);
 }
 
 void MainWindow::openclicked(){
@@ -50,6 +58,7 @@ void MainWindow::openclicked(){
     ui->text_openfile->setVisible(false);
     this->file_name=fileName;
     ui->sender_ui->setVisible(true);
+    ui->help_ui->setVisible(false);
     ui->receive_ui->setVisible(false);
 
     if (file_name.endsWith(".txt")){
@@ -103,7 +112,7 @@ void MainWindow::openclicked(){
 void MainWindow::receiveclicked(){
     isClient=true;
     ui->text_openfile->setVisible(false);
-
+    ui->help_ui->setVisible(false);
     ui->sender_ui->setVisible(false);
     ui->receive_ui->setVisible(true);
 

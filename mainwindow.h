@@ -35,6 +35,7 @@ private:
 public slots:
     void openclicked();
     void receiveclicked();
+    void helpclicked();
     void sentOk();
     void handshook();
     void clientConnected();
